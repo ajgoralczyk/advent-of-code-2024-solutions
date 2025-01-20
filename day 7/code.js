@@ -24,17 +24,6 @@ fs.readFile("./data.txt", "utf8", (err, data) => {
   }
 
   function checkTotalWithConcatenation(total, current, index, numbers) {
-    // console.log(
-    //   "checkTotalWithConcatenation",
-    //   {
-    //     total,
-    //     current,
-    //     buffer,
-    //     index,
-    //   },
-    //   numbers.join(" ")
-    // );
-
     if (total < current) {
       return false;
     }
@@ -74,9 +63,7 @@ fs.readFile("./data.txt", "utf8", (err, data) => {
     if (checkTotal(total, numbers[0], 1, numbers)) {
       totalCorrect += total;
     } else {
-      // console.log(equation);
       if (checkTotalWithConcatenation(total, numbers[0], 1, numbers)) {
-        // console.log("found with concatenation", equation);
         totalCorrectWithConcatenation += total;
       }
     }
